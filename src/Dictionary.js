@@ -6,6 +6,7 @@ export default function Dictionary() {
   const [search, setSearch] = useState("");
   const [info, setInfo] = useState("");
 
+  //API docu: https://www.shecodes.io/learn/apis/dictionary
   function handleResponse(response) {
     setInfo(response.data);
     console.log(response.data);
