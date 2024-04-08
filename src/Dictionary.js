@@ -10,7 +10,6 @@ export default function Dictionary() {
   //API docu: https://www.shecodes.io/learn/apis/dictionary
   function handleResponse(response) {
     setResult(response.data);
-    console.log(result);
   }
 
   function handleChange(event) {
