@@ -1,0 +1,9 @@
+header {
+  text-align: center;
+  font-size: 100px;
+}
+footer {
+  margin-top: 50px;
+  border-top: solid;
+  border-top-width: 1px;
+}
