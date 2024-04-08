@@ -1,8 +1,8 @@
 import React from "react";
 import Meanings from "./Meanings";
+import Synonyms from "./Synonyms";
 
 export default function Result(props) {
-  console.log(props);
   if (props.result) {
     return (
       <div className="Result">
@@ -20,6 +20,7 @@ export default function Result(props) {
               </div>
             );
           })}
+          <Synonyms synonyms={props.result.meanings} />
         </div>
       </div>
     );
