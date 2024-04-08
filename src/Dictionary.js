@@ -9,7 +9,8 @@ export default function Dictionary() {
   //API docu: https://www.shecodes.io/learn/apis/dictionary
   function handleResponse(response) {
     setInfo(response.data);
-    console.log(response.data);
+    console.log(response.data.word);
+    alert(info.word);
   }
 
   function handleChange(event) {
@@ -19,7 +20,7 @@ export default function Dictionary() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Searching for ${search}`);
+    alert(`Searching for ${search} ....`);
     let apiKey = "636ft3f4ca7b895f0259dd71a1354d0o";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${search}&key=${apiKey}`;
 
