@@ -10,7 +10,13 @@ function App() {
         <main>
           <Dictionary />
         </main>
-        <footer className="text-center">Coded by Matea Zerjav</footer>
+        <footer className="text-center">
+          Coded by Matea Zerjav and is
+          <a href="https://github.com/MateaZerjav/react-dictionary-project">
+            {" "}
+            open-sourced on GitHub
+          </a>
+        </footer>
       </div>
     </div>
   );
