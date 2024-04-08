@@ -20,7 +20,7 @@ export default function Dictionary() {
           placeholder="Search for ...."
           onChange={handleChange}
         ></input>
-        <input type="submit"></input>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
