@@ -4,7 +4,7 @@ import axios from "axios";
 import Result from "./Result";
 
 export default function Dictionary() {
-  const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState("hello");
   const [result, setResult] = useState(null);
 
   //API docu: https://www.shecodes.io/learn/apis/dictionary
@@ -33,7 +33,7 @@ export default function Dictionary() {
           onChange={handleChange}
         ></input>
         <button type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
       <Result result={result} />
