@@ -4,7 +4,7 @@ import axios from "axios";
 import Result from "./Result";
 
 export default function Dictionary() {
-  const [search, setSearch] = useState("");
+  const [keyword, setKeyword] = useState("");
   const [result, setResult] = useState(null);
 
   //API docu: https://www.shecodes.io/learn/apis/dictionary
@@ -14,13 +14,13 @@ export default function Dictionary() {
 
   function handleChange(event) {
     event.preventDefault();
-    setSearch(event.target.value);
+    setKeyword(event.target.value);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
     let apiKey = "636ft3f4ca7b895f0259dd71a1354d0o";
-    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${search}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
 
     axios.get(apiUrl).then(handleResponse);
   }
@@ -32,7 +32,9 @@ export default function Dictionary() {
           placeholder="Search for ...."
           onChange={handleChange}
         ></input>
-        <button type="submit">Submit</button>
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </form>
       <Result result={result} />
     </div>
