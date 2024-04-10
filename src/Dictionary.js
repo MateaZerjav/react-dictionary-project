@@ -36,9 +36,7 @@ export default function Dictionary() {
     const apiPhotoKey =
       "ReMoiv3vovppTldc4NhdQ0usDfLwyXcMMZYuADgKQ8aoOpPZcRKFHlkq";
     let apiPhotoUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
-    const headers = {
-      Authorization: `Bearer ${apiPhotoKey}`,
-    };
+
     axios
       .get(apiPhotoUrl, {
         headers: {
