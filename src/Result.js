@@ -8,7 +8,7 @@ export default function Result(props) {
     return (
       <div className="Result">
         <h4>
-          <em>.you searched for word.</em>
+          <em>..you searched for word..</em>
         </h4>
         <h2>{props.result.word}</h2>
         <div className="phonetic">
